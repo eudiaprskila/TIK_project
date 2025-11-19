@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawxie Petshop - Layanan</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="pawxie.css">
+</head>
+<body>
+    <header>
+        <!-- Logo perusahaan: Menampilkan gambar logo di header -->
+        <div class="logo">
+            <img src="logoo.png" alt="Pawxie Petshop">
+            <h1>Pawxie Petshop</h1>
+        </div>
+        <!-- Navigasi: Menu utama untuk navigasi antar halaman -->
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+            </ul>
+            <!-- Tombol toggle untuk menu mobile: Menggunakan JavaScript untuk toggle visibilitas -->
+            <button id="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Bagian utama dengan konten layanan: Menggunakan grid untuk layout layanan -->
+    <main id="services">
+        <section class="columns">
+            <!-- Kolom 1: Grooming -->
+            <div class="column">
+                <h2>Grooming</h2>
+                <p>Layanan potong kuku, mandi, dan styling rambut untuk anabul Anda.</p>
+                <button onclick="showAlert('Grooming')">Pesan Sekarang</button>
+            </div>
+            <!-- Kolom 2: Pet Hotel -->
+            <div class="column">
+                <h2>Pet Hotel</h2>
+                <p>Tempat penitipan aman dan nyaman untuk anabul saat Anda berpergian.</p>
+                <button onclick="showAlert('Pet Hotel')">Reservasi</button>
+            </div>
+            <!-- Kolom 3: Day Care -->
+            <div class="column">
+                <h2>Day Care</h2>
+                <p>Penitipan harian untuk beberapa jam, dengan aktivitas bermain dan pengawasan.</p>
+                <button onclick="showAlert('Day Care')">Daftar</button>
+            </div>
+            <!-- Kolom 4: Konsultasi -->
+            <div class="column">
+                <h2>Konsultasi Kesehatan</h2>
+                <p>Konsultasi dengan dokter hewan untuk kesehatan anabul Anda.</p>
+                <button onclick="showAlert('Konsultasi')">Jadwalkan</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Pawxie Petshop. Tempat ternyaman anabulmu!!.</p>
+        <p>&copy; Kelas XI.7 Kelompok 9 </p>
+        <p>&copy; Jaquelyn/14 Eudia/9 Kekey/16 </p>
+        <!-- Nama media sosial: Link ke akun media sosial perusahaan -->
+        <div class="social-media">
+            <a href="https://facebook.com/pawxipetshop" target="_blank">Facebook</a>
+            <a href="https://instagram.com/pawxipetshop" target="_blank">Instagram</a>
+            <a href="https://twitter.com/pawxipetshop" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript internal: Digabungkan dalam file HTML untuk interaktivitas -->
+    <script>
+        // Fungsi untuk toggle menu navigasi: Menampilkan/menyembunyikan menu saat tombol toggle diklik (untuk mobile)
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        });
+
+        // Fungsi showAlert: Menampilkan alert sederhana saat tombol di kolom diklik (untuk interaktivitas)
+        function showAlert(section) {
+            alert(`Anda mengklik bagian: ${section}. Fitur ini dapat dikembangkan lebih lanjut!`);
+        }
+
+        //JavaScript di gunakan untuk menambahkan interaktivitas dasar. Fungsi showAlert bisa diganti dengan navigasi ke halaman lain.
+    </script>
+</body>
+</html>

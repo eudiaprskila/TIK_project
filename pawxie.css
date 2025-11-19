@@ -1,0 +1,148 @@
+/* Reset dasar untuk konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling body: Mengatur font dan latar belakang umum */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: rebeccapurple;
+    background-color: lightpink;
+}
+
+/* Header: Styling untuk header dengan logo dan navigasi */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: mediumvioletred;
+    padding: 1.5rem;
+    color: whitesmoke;
+}
+
+/* Logo: Mengatur ukuran dan posisi gambar logo */
+.logo img {
+    height: 75px;
+    width: 75px;
+}
+.logo {
+    display: flex;
+    align-items: center; /* otomatis teks naik sejajar logo */
+    gap: 10px;
+} 
+/* Navigasi: Styling menu navigasi */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 3rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: mediumvioletred;
+}
+
+/* Tombol toggle menu: Untuk mobile, awalnya tersembunyi */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Bagian utama: Container untuk 4 kolom */
+main {
+    padding: 2rem;
+    margin-left: 270px;
+}
+
+/* Kolom: Menggunakan grid untuk 4 kolom responsif */
+.columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+/* Styling kolom individu: Padding dan bayangan untuk estetika */
+.column {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.column h2 {
+    margin-bottom: 0.5rem;
+}
+
+.column button {
+    background-color: skyblue;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.column button:hover {
+    background-color: black;
+}
+
+/* Footer: Styling footer dengan media sosial */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.social-media a {
+    color: green;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivitas: Untuk layar kecil, ubah grid menjadi 1 kolom dan tampilkan toggle menu */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: green;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    #menu-toggle {
+        display: block;
+    }
+    
+    .columns {
+        grid-template-columns: 1fr;
+    }
+}

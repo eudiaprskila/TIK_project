@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawxie Petshop - Produk</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="pawxie.css">
+</head>
+<body>
+    <header>
+        <!-- Logo perusahaan: Menampilkan gambar logo di header -->
+        <div class="logo">
+            <img src="logoo.png" alt="Pawxie Petshop">
+            <h1>Pawxie Petshop</h1>
+        </div>
+        <!-- Navigasi: Menu utama untuk navigasi antar halaman -->
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+            </ul>
+            <!-- Tombol toggle untuk menu mobile: Menggunakan JavaScript untuk toggle visibilitas -->
+            <button id="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Bagian utama dengan konten produk: Menggunakan grid untuk layout produk -->
+    <main id="products">
+        <section class="columns">
+            <!-- Kolom 1: Makanan -->
+            <div class="column">
+                <h2>Dog food</h2>
+                <p>Berbagai jenis makanan berkualitas untuk anjing seperti dry food, wet food, dan treat.</p>
+                <button onclick="showAlert('Makanan anjing')">Beli Sekarang</button>
+            </div>
+            <!-- Kolom 2: Makanan -->
+            <div class="column">
+                <h2>Cat food</h2>
+                <p>Berbagai jenis makanan berkualitas untuk kucing seperti dry food, wet food, dan treat</p>
+                <button onclick="showAlert('Makanan kucing')">Beli sekarang</button>
+            </div>
+            <!-- Kolom 3: Aksesoris -->
+            <div class="column">
+                <h2>Aksesoris</h2>
+                <p>Kalung, tali, tempat tidur, dan aksesoris lainnya untuk kenyamanan anabul.</p>
+                <button onclick="showAlert('Aksesoris')">Jelajahi</button>
+            </div>
+            <!-- Kolom 4: Perawatan -->
+            <div class="column">
+                <h2>Mainan</h2>
+                <p>Mainan interaktif dan edukatif untuk menjaga kesehatan dan keceriaan anabul Anda.</p>
+                <button onclick="showAlert('Mainan')">Lihat koleksi</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Pawxie Petshop. Tempat ternyaman anabulmu!!.</p>
+        <p>&copy; Kelas XI.7 Kelompok 9 </p>
+        <p>&copy; Jaquelyn/14 Eudia/9 Kekey/16 </p>
+        <!-- Nama media sosial: Link ke akun media sosial perusahaan -->
+        <div class="social-media">
+            <a href="https://facebook.com/pawxipetshop" target="_blank">Facebook</a>
+            <a href="https://instagram.com/pawxipetshop" target="_blank">Instagram</a>
+            <a href="https://twitter.com/pawxipetshop" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript internal: Digabungkan dalam file HTML untuk interaktivitas -->
+    <script>
+        // Fungsi untuk toggle menu navigasi: Menampilkan/menyembunyikan menu saat tombol toggle diklik (untuk mobile)
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        });
+
+        // Fungsi showAlert: Menampilkan alert sederhana saat tombol di kolom diklik (untuk interaktivitas)
+        function showAlert(section) {
+            alert(`Anda mengklik bagian: ${section}. Fitur ini dapat dikembangkan lebih lanjut!`);
+        }
+
+        //JavaScript di gunakan untuk menambahkan interaktivitas dasar. Fungsi showAlert bisa diganti dengan navigasi ke halaman lain.
+    </script>
+</body>
+</html>

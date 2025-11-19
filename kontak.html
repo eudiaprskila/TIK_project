@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawxie Petshop - Kontak</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="pawxie.css">
+</head>
+<body>
+    <header>
+        <!-- Logo perusahaan: Menampilkan gambar logo di header -->
+        <div class="logo">
+            <img src="logoo.png" alt="Pawxie Petshop">
+            <h1>Pawxie Petshop</h1>
+        </div>
+        <!-- Navigasi: Menu utama untuk navigasi antar halaman -->
+        <nav>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+            </ul>
+            <!-- Tombol toggle untuk menu mobile: Menggunakan JavaScript untuk toggle visibilitas -->
+            <button id="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Bagian utama dengan konten kontak: Menggunakan grid untuk layout informasi kontak -->
+    <main id="contact">
+        <section class="columns">
+            <!-- Kolom 1: Alamat -->
+            <div class="column">
+                <h2>Alamat Kami</h2>
+                <p>Jl. Anabul Sejahtera No. 123, Kota Petshop, Indonesia 12345</p>
+                <button onclick="showAlert('Alamat')">Lihat di Peta</button>
+            </div>
+            <!-- Kolom 2: Email -->
+            <div class="column">
+                <h2>Email</h2>
+                <p>info@pawxiepetshop.com</p>
+                <p>support@pawxiepetshop.com</p>
+                <button onclick="showAlert('Email')">Kirim Email</button>
+            </div>
+            <!-- Kolom 3: Telepon -->
+            <div class="column">
+                <h2>Telepon</h2>
+                <p>Telp: 0812-345-678</p>
+                <p>WhatsApp: 089-876-543</p>
+                <button onclick="showAlert('Telepon')">Hubungi Sekarang</button>
+            </div>
+            <!-- Kolom 4: Formulir Kontak -->
+            <div class="column">
+                <h2>Kirim Pesan</h2>
+                <form action="#" method="post">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Pawxie Petshop. Tempat ternyaman anabulmu!!.</p>
+        <p>&copy; Kelas XI.7 Kelompok 9 </p>
+        <p>&copy; Jaquelyn/14 Eudia/9 Kekey/16 </p>
+        <!-- Nama media sosial: Link ke akun media sosial perusahaan -->
+        <div class="social-media">
+            <a href="https://facebook.com/pawxipetshop" target="_blank">Facebook</a>
+            <a href="https://instagram.com/pawxipetshop" target="_blank">Instagram</a>
+            <a href="https://twitter.com/pawxipetshop" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript internal: Digabungkan dalam file HTML untuk interaktivitas -->
+    <script>
+        // Fungsi untuk toggle menu navigasi: Menampilkan/menyembunyikan menu saat tombol toggle diklik (untuk mobile)
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        });
+
+        // Fungsi showAlert: Menampilkan alert sederhana saat tombol di kolom diklik (untuk interaktivitas)
+        function showAlert(section) {
+            alert(`Anda mengklik bagian: ${section}. Fitur ini dapat dikembangkan lebih lanjut!`);
+        }
+
+        //JavaScript di gunakan untuk menambahkan interaktivitas dasar. Fungsi showAlert bisa diganti dengan navigasi ke halaman lain.
+    </script>
+</body>
+</html>
